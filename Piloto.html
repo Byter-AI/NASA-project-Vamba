@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marte EVA · Propuesta de proyecto</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Piloto.css">
+
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#top">MARTE<span>·</span>EVA</a>
+<ul><li><a href="#demo">Demo</a></li><li><a href="#proyecto">Proyecto</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#herramientas">Herramientas</a></li><li><a href="#recursos">Recursos</a></li></ul></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+ <div class="kick">Propuesta de proyecto · Misión Marte</div>
+ <h1>VAMBA</h1>
+ <p class="lead">Diseñamos el visor y el módulo de antebrazo de un traje espacial para guiar a un astronauta cuando el polvo marciano anula la visibilidad. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+ <div class="acts"><a class="cta pri" href="#demo">▶ Probar la simulación</a><a class="cta" href="#recursos">Ver vídeo y README</a></div>
+ <div class="meta"><div><b>2</b><span>modos de operación</span></div><div><b>0%</b><span>visibilidad óptica soportada</span></div><div><b>360°</b><span>visor interactivo</span></div></div>
+</div></header>
+
+<section id="demo"><div class="wrap">
+ <div class="kick">Demo interactiva</div><h2>El casco y el antebrazo, en primera persona</h2>
+ <p class="sub">Usa los botones físicos del módulo de poliimida para cambiar de modo, activar el pulso EDS o subir la intensidad de la tormenta. Lorem ipsum dolor sit amet.</p>
+<div id="stage" class="m0">
+<div id="v"></div>
+<div id="dirt" class="ov"></div><div id="sweep" class="ov"></div><div id="helmet" class="ov"></div>
+<div id="hud">
+ <div class="p" id="sys"><div>SYS: xEVA-HUD // SLAM-IMU ACTIVE</div><div class="he">SENSOR: LiDAR + mmWave RADAR</div><div class="he">SHIELD: KAPTON POLYIMIDE ARM-UNIT</div><div class="he">LINK: ROVER-RELAY OFFLOAD</div><div id="edsT" class="he">EDS: LISTO</div></div>
+ <div class="p" id="badge" style="border:0;background:none"></div>
+ <div class="p" id="vis"></div>
+ <div class="p" id="left"><b>TERRENO / MINERALOGÍA</b><div id="elev"></div><div id="min"></div></div>
+ <div class="p" id="right"><b>MINIMAPA 3D-TOPO</b><canvas id="mm" width="120" height="120"></canvas><div id="imu" style="margin-top:6px"></div></div>
+ <div class="p" id="bat"></div>
+ <div class="p" id="alerts"><b>RUTA AR · BALIZA DEL HÁBITAT</b><div id="al"></div></div>
+</div>
+<div id="arm"><div class="kapton">
+ <div class="lbl"><span>SHIELD: KAPTON POLYIMIDE ARM-UNIT</span><span>xEMU-A7</span></div>
+ <div class="screen"><canvas id="ac" width="260" height="110"></canvas></div>
+ <div class="row">
+  <div class="dpad"><i></i><b data-d="0,-1">▲</b><i></i><b data-d="-1,0">◀</b><b data-d="0,0">●</b><b data-d="1,0">▶</b><i></i><b data-d="0,1">▼</b><i></i></div>
+  <div class="mid"><button class="btn big cy" id="bR">MODO<br>INVESTIGACIÓN</button><button class="btn big am" id="bE">MODO<br>EMERGENCIA</button></div>
+  <div class="rt"><button class="btn" id="bP">+</button><button class="btn" id="bM">−</button><button class="btn eds" id="bD">PULSO EDS</button></div>
+ </div>
+ <label>INTENSIDAD DE TORMENTA <span id="sv"></span><input type="range" id="st" min="0" max="100" value="45"></label>
+</div></div>
+<button class="fsb" id="fs" type="button">⛶ Pantalla completa</button><div id="hint">Haz clic para activar teclado y zoom</div>
+</div>
+ <div class="keys"><span><kbd>1</kbd> Investigación</span><span><kbd>2</kbd> Emergencia</span><span><kbd>E</kbd> Pulso EDS</span><span><kbd>+</kbd><kbd>−</kbd> Zoom</span><span><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> Minimapa</span><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Caminar</span><span>Arrastrar = girar la cabeza</span></div>
+</div></section>
+
+<section id="proyecto"><div class="wrap">
+ <div class="kick">Qué hacemos</div><h2>Tres ideas para sobrevivir al polvo</h2>
+ <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+ <div class="g3">
+  <div class="card"><div class="ico">📡</div><h3>Ver sin ver</h3><p>LiDAR y radar de ondas milimétricas dibujan el terreno aunque la visibilidad óptica sea nula. Lorem ipsum dolor sit amet.</p></div>
+  <div class="card"><div class="ico">🧭</div><h3>Ruta AR de emergencia</h3><p>Un camino luminoso sobre el suelo lleva al refugio y oculta todo lo demás. Consectetur adipiscing elit.</p></div>
+  <div class="card"><div class="ico">⚡</div><h3>Visor autolimpiante</h3><p>Un escudo electrodinámico repele el polvo pegado por estática. Sed do eiusmod tempor incididunt.</p></div>
+ </div>
+</div></section>
+
+<section id="nosotros"><div class="wrap two">
+ <div><div class="kick">Sobre nosotros</div><h2>Un equipo pequeño con la vista puesta en Marte</h2>
+ <p style="color:#b9aa9b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero, sed cursus ante dapibus diam. Sed nisi nulla quis sem at nibh elementum imperdiet.</p></div>
+ <div class="team">
+  <div class="who"><div class="av">NA</div><div>Nombre Apellido<small>Rol · Interfaces</small></div></div>
+  <div class="who"><div class="av">NA</div><div>Nombre Apellido<small>Rol · Gráficos 3D</small></div></div>
+  <div class="who"><div class="av">NA</div><div>Nombre Apellido<small>Rol · Investigación</small></div></div>
+ </div>
+</div></section>
+
+<section id="herramientas"><div class="wrap">
+ <div class="kick">Herramientas</div><h2>Con qué lo construimos</h2>
+ <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+ <div class="chips"><span class="chip"><i>◆</i>Three.js</span><span class="chip"><i>◆</i>WebGL</span><span class="chip"><i>◆</i>HTML · CSS · JavaScript</span><span class="chip"><i>◆</i>VS Code</span><span class="chip"><i>◆</i>LiDAR + mmWave (simulado)</span><span class="chip"><i>◆</i>IMU + SLAM (simulado)</span><span class="chip"><i>◆</i>Poliimida / Kapton</span></div>
+</div></section>
+
+<section id="recursos" class="res"><div class="wrap">
+ <div class="kick">Recursos</div><h2>Más información</h2>
+ <p class="sub">Reemplaza los enlaces por los definitivos.</p>
+ <div class="g3">
+  <a class="card" href="#"><div class="thumb">▶</div><h3>Vídeo explicativo</h3><p>Lorem ipsum dolor sit amet, 3 min.</p></a>
+  <a class="card" href="#"><div class="thumb">📄</div><h3>README.md</h3><p>Instalación, controles y arquitectura.</p></a>
+  <a class="card" href="#"><div class="thumb">⌥</div><h3>Repositorio</h3><p>Código fuente de la simulación.</p></a>
+ </div>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Marte EVA · Propuesta de proyecto</span><span>Simulación ilustrativa, no es un producto de la NASA.</span></div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="Piloto.js"></script>
+</body></html>
